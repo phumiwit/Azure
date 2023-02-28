@@ -1,0 +1,31 @@
+<!-- {% extends "base.html" %}
+
+{%block title%}
+    <title>login</title>
+{% endblock%}
+
+{% block content%}
+    <h1>login</h1>
+    {% if messages %}
+        {%for message in messages%}
+            <div class="alert alert-primary" role="alert">
+                {{message.tags}}
+            </div>
+            <dir class="alert alert-{{message.tags}}" role="alert">{{message}}</div>
+        {% endfor %}
+    {% endif %}
+    <form method="POST"> 
+        {%  csrf_token %}
+        
+        <div>
+            <label for = "username"> username </label>
+            <input type="text" class="form-control" name="username">
+        </div>
+            <label for = "password"> password </label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        
+        <button type="submit" class = "btn btn-primary"> sign in</button>
+    </form>
+    <a href="{% url 'forgot_password' %}">Forgot Password</a>
+{%endblock%} -->

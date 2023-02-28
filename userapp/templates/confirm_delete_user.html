@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+{% extends "base1.html" %}
+
+
+
+
+{% block content%}
+<!DOCTYPE html>
+  <html>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <style>
+
+            .jumbotron{
+            background-color: rgba(255, 255, 255, 0.001);
+            
+        }
+        p{
+            font-size:2vw;
+            color:#ffffff;
+            font-family:fantasy;
+
+        }
+        h1{
+            
+            color:#ffffff;
+            font-family:fantasy;
+
+        }
+        </style>
+    </head>
+    <body>
+<div class="jumbotron text-center">
+        <h1>Confirm Delete</h1>
+        <p>Are you sure you want to delete this user?</p>
+    <form action="{% url 'user_delete' user_id=user.id %}" method="post">
+       {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Delete</button>
+      <a href="{% url 'userdetail' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+      
+</div>
+       
+    </div>
+    </body>
+  </html>
+  {% endblock %}

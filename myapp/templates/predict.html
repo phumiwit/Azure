@@ -1,0 +1,138 @@
+
+
+
+
+
+
+
+   
+{% extends 'base1.html' %}
+{% load static %}
+   
+{% block content%}
+     <!DOCTYPE html>
+     <html>
+     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+         <style>
+
+        
+          .jumbotron{
+            background-color: rgba(255, 255, 255, 0.001);
+        }
+        h1{
+            
+            color:#ffffff;
+            font-family:fantasy;
+
+        }
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(251, 62, 147, 0.863);
+  max-width: 800px;
+  max-height: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0HBwcHDQ0IDQcHBw0HBwcIBw8ICQcNFREXFiARExMYHiwgGCYnJxMfITEhMSkrLjo6Fx8zODM2N0AtLisBCgoKDQ0NDg0NDzcZFRkrNystKysrKysrLS0tKysrKys3Kzc0KysrKy0rNysrLSs3LS0rNys3KysrKystNystK//AABEIAKgBLAMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIFBP/EABwQAQEAAgIDAAAAAAAAAAAAAAARASFRwUFxgf/EABkBAQEBAQEBAAAAAAAAAAAAAAEAAgQFB//EABkRAQEBAQEBAAAAAAAAAAAAAAAREgFhAv/aAAwDAQACEQMRAD8A91Wsjjr6A1VZKedEaqs0rVUaEKaGhlTQq1lWqlqshoaVmlaqapUoaI1VrC01RoZq1rQjQzVaoiqypqUQNDQgalVlWqlEEFAKAEngGVeJXUqsqalog1Q1SoGppWFrVDVGapqjQyrVEVWapqUQa0GqIGhorK01NUrNVqhqlZU1RoZq1rQjVGapqiqyrVCiBqaEDQoimpzqrNK8KutoSlNEaEDUqsq1Qqsh51NCDVDVKypqaKzVpojVKzVrVUaGVNEVWarVSiBoaog1U0MrTQ1Ss1aamqVlWqI0M0p0I3RmrWqoogaHOEHg12NUqBojQyrVUaozVpoaGataqaGVNEVWQ0RoQaqaEDQ0VlWqmqM0NDYzVrVUVWVNEVWaNVNCBoaKgaotVkaoaq1mhqaq1kNEc8ZV4NdaqyrVSqyHQaEGqmisqaGhlTVGqVmrWqI0M1aalVmq1RFVkNDQg1U0MqalWsqaFqs0aqjSslNEaVmjVEaEoamhBqhVrKmqOdRlXg11tUrNWmpqjNWtUNDNU1KrIaGhBrSjQhWqFWsqalq1kNEbpWaU0RsZo1U0rNDRGhBqqNDKmhVZVqpatZDQ1VrI1U0rJTzojVVmhqjnKyPBrraEo1Q1Ssqamisq1Q1Ss0Ok3RmlaoaVmlNTSshoaEGtKNDKnQVayrVS1ayGiNVayU1RqqyNUNCUpojQg1VGhlTQqsqalog1Q5ysleDXY1VrNDRGlZK1U0JQ0NCDVCrWVNUVayGhqrWaVqpqqzQ6DSs0aqaEoaGhA1NDKtaCqyGpqrWRqiNVayU1RqqxVrVDQlKaI0IGqOcMq8GuuKtZVqqLVrIaGlZo1U1VrNDRGhla1U1RmrTQ0MrTUq1kaoaq1kNDVWs0pqaq1kaoaEpTU0JRqhoZU1KrKtaCiBqapUDRGqMq1VHOVB4TrUQVTVEDQqsq1oRRA1RqrWRqhqjNU1NUrNWtURoZU1NDNWmhVZVqpRA0NUQaqapWVpojVGVrVTQzVpoaGatNUVWVaoVWQ6DwgPGdQAkAJACSgGhQGqhQNAKNIpVCCijVQUDQtANSgNUCoGpQGqFpQIWrjrQNc6O8pqebwut7z8wo1We/Pqa5M59wDTznr//Z") ;
+  background-size: 100%;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            
+            border-radius: 20px;
+
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 14px;
+  color: white;
+  size: 20px;
+  /* background-color: #ee62e27a; */
+ 
+  background: url("https://images.unsplash.com/photo-1503455637927-730bce8583c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWMlMjBwaW5rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60") ;
+;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+        .m{
+            
+            font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+            font-size: 5px;
+        }
+        m{
+            
+            font-family: fantasy; 
+            color:#fefefe;
+            font-size: 25px;
+        }
+        p{
+            
+            color:#000000;
+            font-family:fantasy;
+
+        }
+        .p1{
+            
+            color:#ffffff;
+            font-family:Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+            font-size: 22px;
+
+        }
+        
+        button{
+            max-width: 160px;
+        
+            border-radius: 10px;
+        }
+         </style>
+     </head>
+     <body>
+        <div class="jumbotron text-center">
+            <h1>File Paths</h1>
+        </div>
+   
+    <div class="card">
+        <!-- <img src="static/img/predict2.png" alt="picturecompo" style="width:100%" style="height:10%"> -->
+        {% for file, genre,audio_id,top3_genre,filepath in context %}
+          <a href="{% url 'stackbar' audio_id=audio_id %}" class = "p1">{{file}} - {{genre}}</a>
+        {% endfor %}
+        <form method="post"  action="{% url 'download_json' %}">
+            {% csrf_token %}
+            {% for file, genre,audio_id,top3_genre,filepath in context %}
+                <input type="hidden" name="filename" value="{{ file }}">
+                <input type="hidden" name="genre" value="{{ genre }}">
+                <input type="hidden" name="all_genre" value="{{ top3_genre }}">
+            {% endfor %}
+            <button type="submit"class ="m">Download JSON</button>
+        </form>
+        
+        <form method="post"  action="{% url 'collection' %}">
+            {% csrf_token %}
+            {% for file, genre,audio_id,top3_genre,filepath in context %}
+                <input type="hidden" name="filename" value="{{ file }}">
+                <input type="hidden" name="genre" value="{{ genre }}">
+                <input type="hidden" name="all_genre" value="{{ top3_genre }}">
+                <input type="hidden" name="audio_id" value="{{ audio_id }}">
+                
+            {% endfor %}
+            <br>
+            <label><m>Collectionname</m> : <input type="text" name="collectionname"></label>
+            <button type="submit" submit class ="m" >Add Collection</button>
+        </form>
+    </div>
+     </body>
+
+     </html>
+
+     {%endblock%}
+
+    
+     

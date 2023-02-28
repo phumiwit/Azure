@@ -1,0 +1,273 @@
+ 
+   
+{% extends 'base1.html' %}
+{% load static %}
+   
+{% block content%}
+     <!DOCTYPE html>
+     <html>
+     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+         <style>
+                   .file-uploader {
+  /* background: url("https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60") ;
+  border-radius: 20px;
+  
+  color: #242424;
+  background-size: 100%;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+ */
+
+}
+
+.file-uploader__message-area {
+  font-size: 18px;
+  padding: 1em;
+  text-align: center;
+  color: #000000;
+
+}
+
+.file-list {
+  background-color: white;
+  font-size: 16px;
+}
+
+.file-list__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-list li {
+  height: 50px;
+  line-height: 50px;
+  margin-left: 0.5em;
+  border: none;
+  overflow: hidden;
+}
+
+.removal-button {
+  width: 20%;
+  border: none;
+  background-color: #d65d38;
+  color: white;
+  
+}
+.removal-button::before {
+  content: "X";
+}
+.removal-button:focus {
+  outline: 0;
+}
+
+.file-chooser {
+  padding: 1em;
+  transition: background-color 1s, height 1s;
+}
+.file-chooser p {
+  font-size: 18px;
+  padding-top: 1em;
+}
+
+.file-uploader {
+  max-width: 800px;
+  height: 500px;
+  margin: 2em auto;
+  
+}
+.file-uploader * {
+  display: block;
+}
+.file-uploader input[type=submit] {
+  margin-top: 2em;
+  float: right;
+}
+
+.file-list {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.file-list__name {
+  max-width: 70%;
+  float: left;
+}
+
+.removal-button {
+  display: inline-block;
+  height: 100%;
+  float: right;
+  
+}
+
+.file-chooser {
+  width: 90%;
+  margin: 0.5em auto;
+}
+
+.file-chooser__input {
+  margin: 0 auto;
+}
+
+.file-uploader__submit-button {
+  width: 100%;
+  border: none;
+  font-size: 1.5em;
+  padding: 1em;
+  background-color: #fe359a;
+  color: white;
+  border-radius: 30px;
+
+  max-width: 400px;
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.file-uploader__submit-button:hover {
+  background-color: #e63030;
+}
+
+.file-list li:after, .file-uploader:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+.hidden input {
+  display: none;
+}
+
+.error {
+  background-color: #d65d38;
+  color: white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+.jumbotron{
+            background-color: rgba(255, 255, 255, 0.001);
+            color: aliceblue;
+        }
+        P1{
+          font-size: 25px;
+              color: hsl(0, 100%, 100%);
+              border: 3px solid #73ad2100;
+              font-family:  Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+              font-weight: 900;
+        }
+        P2{
+          font-size: 20px;
+              color: hsl(0, 0%, 100%);
+              border: 3px solid #73ad2100;
+              font-family:  Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; ; 
+              font-weight: 500;
+        }
+        P3{
+          font-size: 25px;
+              color: hsl(0, 100%, 56%);
+              border: 3px solid #73ad2100;
+              font-family:  Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; ; 
+              font-weight: 800;
+        }
+        P{
+          
+              color: hsl(0, 0%, 100%);
+              font-size: 25px;
+        }
+        m{
+          position: absolute;
+           top: 50%;
+           left: 50%;
+           -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+        }
+        .alert{
+          
+                 background-color: rgb(255, 41, 120);
+                color: white;
+                margin-bottom: 15px;
+                font-size: 1.5em;
+                
+        }
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(251, 62, 147, 0.863);
+  max-width: 800px;
+  max-height: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: url("https://media.istockphoto.com/id/1148381600/photo/summer-holiday-smartphone-headphones-sunglasses.jpg?s=612x612&w=0&k=20&c=la1FWJqzlg_XBBhnKFvRanl4PeH1zeiM83qg_5RexNw=") ;
+  background-size: cover;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            
+            border-radius: 20px;
+
+}
+
+         </style>
+     </head>
+     <body>
+        <div class="jumbotron text-center">
+          
+         <p1>Predictable files have the following file </p1> 
+         <br>
+         <p2> <p3>.wav</p3> files and <p3>.mp4</p3> files</p2> 
+        </div>
+        {% if messages %}
+            <div class="alert" role="alert">
+            {%for message in messages%}
+                {{message}}
+            {% endfor %}
+            </div>
+        {% endif %}
+    <div class="card">
+        <form method="post" class="file-uploader" class="form-group" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="file-uploader__message-area">
+              <p style="font-family:fantasy">Select a file to Prediction</p>
+            </div>
+
+            
+            <div class="file-chooser" >
+                <div class="form-group">
+                     <m>{{ form.as_p }}</m>
+                </div>
+            </div>
+
+
+
+            <input style="font-family:fantasy" class="file-uploader__submit-button" type="submit" value="Prediction File">
+          </form>
+    </div>
+    </body>
+
+     </html>
+
+    
+     {%endblock%} 
+
+
+
+
+
+      

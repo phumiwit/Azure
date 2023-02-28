@@ -1,0 +1,19 @@
+{% extends "base1.html" %}
+
+{%block title%}
+    <title>choosefilepage</title>
+{% endblock%}
+
+{% block content%}
+<h1>File Paths</h1>
+<ul>
+{% for file_path in path_list %}
+    <li>{{ file_path }}</li>
+{% endfor %}
+</ul>
+    
+    
+
+    
+
+{%endblock%}

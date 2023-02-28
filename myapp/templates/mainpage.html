@@ -1,0 +1,32 @@
+{% extends 'base1.html' %}
+{%block title%}
+    <title>หน้าแรก</title>
+{% endblock%}
+
+{% block content%}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+           h1{
+              color:#ffffff;
+              font-family:fantasy;
+            }
+    </style>
+</head>
+<body></body>
+<div class="container">
+    <h1>Trends Top Song From Platform</h1>
+    <a href="{% url 'topsongspotify' %}">
+        <img src="static/img/spotify2.png" alt="Top Songs"width="250" height="250">
+    </a>
+    <a href="{% url 'topsonglastfm' %}">
+        <img src="static/img/lastfm.png" alt="Top Songs" width="270" height="270">
+    </a>
+</div>
+<div class="container">
+    {% include 'collections.html' %}
+</div>
+</body>
+</html>
+{%endblock%}   

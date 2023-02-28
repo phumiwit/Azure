@@ -1,0 +1,434 @@
+<!-- 
+        
+        <a href='/userdetail' class="btn btn-primary"> userdetail </a>
+        <a href='/choosefile' class="btn btn-primary"> choosefile </a>
+        <a href='/userlogout' class="btn btn-primary"> logout </a>
+        <a href='/topsong' class="btn btn-primary"> topsong </a>
+        <a href='/topsong1' class="btn btn-primary"> topsong1 </a>
+        <a href='/collections' class="btn btn-primary"> collections </a>
+        <a href='/mainpage' class="btn btn-primary"> mainpage </a> -->
+        
+
+
+
+        {% load static %}
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <link rel="stylesheet" href="static/css/style.css">
+            <link type="text/css" href="@@path/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="sweetalert2.all.min.js"></script>
+            <script src="sweetalert2.min.js"></script>
+            <link rel="stylesheet" href="sweetalert2.min.css">
+
+
+            <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>         
+        <style>
+         
+              * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+          
+        }
+        
+         
+        body {
+            /* background:url("https://wallpaperaccess.com/full/8351227.gif") */
+            background:url("{% static 'img/bg-1.jpg' %}")no-repeat center center fixed;
+             
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+           
+        
+        }
+        
+        /* ----------------------------------------------------------------------------------------- */
+        #background-wrap {
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+        
+        /* KEYFRAMES */
+        
+        @-webkit-keyframes animateBubble {
+            0% {
+                margin-top: 1000px;
+            }
+            100% {
+                margin-top: -100%;
+            }
+        }
+        
+        @-moz-keyframes animateBubble {
+            0% {
+                margin-top: 1000px;
+            }
+            100% {
+                margin-top: -100%;
+            }
+        }
+        
+        @keyframes animateBubble {
+            0% {
+                margin-top: 1000px;
+            }
+            100% {
+                margin-top: -100%;
+            }
+        }
+        
+        @-webkit-keyframes sideWays { 
+            0% { 
+                margin-left:0px;
+            }
+            100% { 
+                margin-left:50px;
+            }
+        }
+        
+        @-moz-keyframes sideWays { 
+            0% { 
+                margin-left:0px;
+            }
+            100% { 
+                margin-left:50px;
+            }
+        }
+        
+        @keyframes sideWays { 
+            0% { 
+                margin-left:0px;
+            }
+            100% { 
+                margin-left:50px;
+            }
+        }
+        
+        /* ANIMATIONS */
+        
+        .x1 {
+            -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            
+            left: -5%;
+            top: 5%;
+            
+            -webkit-transform: scale(0.6);
+            -moz-transform: scale(0.6);
+            transform: scale(0.6);
+        }
+        
+        .x2 {
+            -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            
+            left: 5%;
+            top: 80%;
+            
+            -webkit-transform: scale(0.4);
+            -moz-transform: scale(0.4);
+            transform: scale(0.4);
+        }
+        
+        .x3 {
+            -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            
+            left: 10%;
+            top: 40%;
+            
+            -webkit-transform: scale(0.7);
+            -moz-transform: scale(0.7);
+            transform: scale(0.7);
+        }
+        
+        .x4 {
+            -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            
+            left: 20%;
+            top: 0;
+            
+            -webkit-transform: scale(0.3);
+            -moz-transform: scale(0.3);
+            transform: scale(0.3);
+        }
+        
+        .x5 {
+            -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            
+            left: 30%;
+            top: 50%;
+            
+            -webkit-transform: scale(0.5);
+            -moz-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+        
+        .x6 {
+            -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            
+            left: 50%;
+            top: 0;
+            
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+        
+        .x7 {
+            -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            
+            left: 65%;
+            top: 70%;
+            
+            -webkit-transform: scale(0.4);
+            -moz-transform: scale(0.4);
+            transform: scale(0.4);
+        }
+        
+        .x8 {
+            -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+            
+            left: 80%;
+            top: 10%;
+            
+            -webkit-transform: scale(0.3);
+            -moz-transform: scale(0.3);
+            transform: scale(0.3);
+        }
+        
+        .x9 {
+            -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+            
+            left: 90%;
+            top: 50%;
+            
+            -webkit-transform: scale(0.6);
+            -moz-transform: scale(0.6);
+            transform: scale(0.6);
+        }
+        
+        .x10 {
+            -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            -moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+            
+            left: 80%;
+            top: 80%;
+            
+            -webkit-transform: scale(0.3);
+            -moz-transform: scale(0.3);
+            transform: scale(0.3);
+        }
+        
+        /* OBJECTS */
+        
+         .bubble {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            
+            -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.1);
+            -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.1);
+            
+            height: 200px;
+            position: absolute;
+            width: 200px;
+        } 
+        
+        .bubble:after {
+            background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 20%); /* FF3.6+ */
+            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(20%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+            background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 20%); /* Chrome10+,Safari5.1+ */
+            background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 20%); /* Opera 12+ */
+            background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 20%); /* IE10+ */
+            background: radial-gradient(ellipse at center,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 20%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            
+            /* -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+            -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3); */
+            
+            content: "";
+            height: 180px;
+            left: 10px;
+            position: absolute;
+            width: 180px;
+        }
+        /* -------------------------------------------------------------------------------- */
+        .one {
+             /* background: url("https://images.unsplash.com/photo-1503455637927-730bce8583c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWMlMjBwaW5rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60") ; */
+             background: rgba(255, 71, 200, 0.73); 
+          /* margin: 1 em auto;  */
+          background-size: 100%;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+        }
+        
+        .two {
+          background: tomato;
+          width: 25%;
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+        }
+        
+        .one ul {
+          text-align: center;
+        }
+        
+        .one ul, .two ul {
+          list-style: none;
+        }
+        
+        .one ul li {
+          display: inline;
+        }
+        
+        .one ul li a, .two ul li a {
+          color: #ffffff;
+          text-decoration: none;
+          text-transform: none;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        
+        .one ul li a {
+          padding: 40px;
+          display: inline-block;
+        }
+        
+        .one ul li a:hover {
+          background: #ff5858;
+          color: #ccc;
+          -webkit-transform: scale(1.2, 1.2);
+          -moz-transform: scale(1.2, 1.2);
+          -o-transform: scale(1.2, 1.2);
+          -ms-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+          text-shadow: 0 0 10px #ccc;
+        }
+        
+        .two ul {
+          padding: 0;
+        }
+        
+        .two ul li a {
+          padding: 15px;
+          display: block;
+        }
+        
+        .two ul li a:hover {
+          background: #ff5858;
+          color: tomato;
+          -webkit-transform: scale(1.2, 1.2);
+          -moz-transform: scale(1.2, 1.2);
+          -o-transform: scale(1.2, 1.2);
+          -ms-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+          text-shadow: 0 0 10px tomato;
+        }  
+
+        body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+
+        </style>
+        </head>
+        <body>
+          
+          <div id="background-wrap">
+            <div class="bubble x1"></div>
+            <div class="bubble x2"></div>
+            <div class="bubble x3"></div>
+            <div class="bubble x4"></div>
+            <div class="bubble x5"></div>
+            <div class="bubble x6"></div>
+            <div class="bubble x7"></div>
+            <div class="bubble x8"></div>
+            <div class="bubble x9"></div>
+            <div class="bubble x10"></div>
+        </div>
+          <nav class="one">
+            <ul>
+              <li><img src="{% static 'img/logo.png' %}" width="100" height="100"></li>
+              <li><a href='/mainpage'>Home</a></li>
+              <!-- <li><button id="choosefile" class="btn btn-primary"> choosefile </button></li> -->
+              <li><a href="/choosefile" id="choosefile">Predict</a></li>
+
+              <li><a href='/userdetail'>UserDetail</a></li>
+              <li><a href='/userlogout'>Logout</a></li>
+            </ul>
+          </nav>
+        <div>
+            
+            {% block content%}
+            {%endblock%}
+          
+          
+        </div>
+         <script src="@@path/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+         
+ <script>
+       document.getElementById("choosefile").addEventListener("click", function(e) {
+                e.preventDefault();
+                    swal({
+                        title: "ข้อตกลง",
+                        text: "เว็บนี้สร้างขึ้นมาเพื่อให้ผู้ใช้งานได้นำไฟล์เพลงสกุล .WAV หรือ .MP4 มาวิเคราะห์ว่าเพลงนั้นๆมีองค์ประกอบของประเภทเพลงแบบไหนบ้างซึ่งข้อมูลที่ได้นำเก็บในระบบจากการวิเคราะห์ไฟล์เพลงที่ผู้ใช้งานใส่เข้ามาเป็นข้อมูลที่ทางเว็บสร้างขึ้นมาเองจากระบบวิเคราะห์ไฟล์เพลงซึ่งข้อมูลนั้น ไม่ได้มีความเกี่ยวข้องกับข้อมูลจริงๆของเพลงนั้นๆและใช้เพื่อการศึกษาเท่านั้น ดังนั้นขอแจ้งให้ทราบว่า ไฟล์เพลงที่ผู้ใช้นำเข้ามาในระบบนั้นต้องได้รับการยินยอมจากผู้ผลิตเพลงนั้นก่อนนำเข้ามาใช้งานจริง ไม่ว่าจะได้รับไฟล์เพลงนั้นมาด้วยวิธีการใดก็ตาม ทางเว็บไม่ขอรับผิดชอบเกี่ยวกับลิขสิทธิเพลงต่างๆที่ผู้ใช้นำมาเข้าระบบทั้งสิ้น กรุณากดปุ่ม ok เพื่อยอมรับข้อตกลง",
+                        type: "info"
+                    }, function() {
+                       
+                    });
+                    $('.swal2-confirm').click(function(){
+                window.location.href = '/choosefile';
+                     });
+                }, );
+ </script>
+
+
+        </body>
+        </html> 
+
+
+
+
+
+
+
+

@@ -1,0 +1,474 @@
+
+{% extends "base1.html" %}
+{% load static %}
+{% block content%}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <style>
+          body {
+            
+          background:url("{% static 'img/valira.jpg' %}")no-repeat center center fixed;
+          -moz-background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            
+        
+        }
+        .jumbotron{
+              background-color: rgba(255, 255, 255, 0.001);
+              
+          }
+          p1{
+              font-size:2vw;
+              color:#ffffff;
+              font-family:fantasy;
+  
+          }
+                  /* ----------------------------------------------------------------------------------------- */
+                  #background-wrap {
+              bottom: 0;
+              left: 0;
+              position: fixed;
+              right: 0;
+              top: 0;
+              z-index: -1;
+          }
+          
+          /* KEYFRAMES */
+          
+          @-webkit-keyframes animateBubble {
+              0% {
+                  margin-top: 1000px;
+              }
+              100% {
+                  margin-top: -100%;
+              }
+          }
+          
+          @-moz-keyframes animateBubble {
+              0% {
+                  margin-top: 1000px;
+              }
+              100% {
+                  margin-top: -100%;
+              }
+          }
+          
+          @keyframes animateBubble {
+              0% {
+                  margin-top: 1000px;
+              }
+              100% {
+                  margin-top: -100%;
+              }
+          }
+          
+          @-webkit-keyframes sideWays { 
+              0% { 
+                  margin-left:0px;
+              }
+              100% { 
+                  margin-left:50px;
+              }
+          }
+          
+          @-moz-keyframes sideWays { 
+              0% { 
+                  margin-left:0px;
+              }
+              100% { 
+                  margin-left:50px;
+              }
+          }
+          
+          @keyframes sideWays { 
+              0% { 
+                  margin-left:0px;
+              }
+              100% { 
+                  margin-left:50px;
+              }
+          }
+          
+          /* ANIMATIONS */
+          
+          .x1 {
+              -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              
+              left: -5%;
+              top: 5%;
+              
+              -webkit-transform: scale(0.6);
+              -moz-transform: scale(0.6);
+              transform: scale(0.6);
+          }
+          
+          .x2 {
+              -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              
+              left: 5%;
+              top: 80%;
+              
+              -webkit-transform: scale(0.4);
+              -moz-transform: scale(0.4);
+              transform: scale(0.4);
+          }
+          
+          .x3 {
+              -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              
+              left: 10%;
+              top: 40%;
+              
+              -webkit-transform: scale(0.7);
+              -moz-transform: scale(0.7);
+              transform: scale(0.7);
+          }
+          
+          .x4 {
+              -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+              animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+              
+              left: 20%;
+              top: 0;
+              
+              -webkit-transform: scale(0.3);
+              -moz-transform: scale(0.3);
+              transform: scale(0.3);
+          }
+          
+          .x5 {
+              -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              
+              left: 30%;
+              top: 50%;
+              
+              -webkit-transform: scale(0.5);
+              -moz-transform: scale(0.5);
+              transform: scale(0.5);
+          }
+          
+          .x6 {
+              -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              
+              left: 50%;
+              top: 0;
+              
+              -webkit-transform: scale(0.8);
+              -moz-transform: scale(0.8);
+              transform: scale(0.8);
+          }
+          
+          .x7 {
+              -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              
+              left: 65%;
+              top: 70%;
+              
+              -webkit-transform: scale(0.4);
+              -moz-transform: scale(0.4);
+              transform: scale(0.4);
+          }
+          
+          .x8 {
+              -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+              animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
+              
+              left: 80%;
+              top: 10%;
+              
+              -webkit-transform: scale(0.3);
+              -moz-transform: scale(0.3);
+              transform: scale(0.3);
+          }
+          
+          .x9 {
+              -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
+              
+              left: 90%;
+              top: 50%;
+              
+              -webkit-transform: scale(0.6);
+              -moz-transform: scale(0.6);
+              transform: scale(0.6);
+          }
+          
+          .x10 {
+              -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              -moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
+              
+              left: 80%;
+              top: 80%;
+              
+              -webkit-transform: scale(0.3);
+              -moz-transform: scale(0.3);
+              transform: scale(0.3);
+          }
+          
+          /* OBJECTS */
+          
+           .bubble {
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              
+              -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.1);
+              -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.1);
+              box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.1);
+              
+              height: 200px;
+              position: absolute;
+              width: 200px;
+          } 
+          
+          .bubble:after {
+              background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 20%); /* FF3.6+ */
+              background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(20%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+              background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 20%); /* Chrome10+,Safari5.1+ */
+              background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 20%); /* Opera 12+ */
+              background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 20%); /* IE10+ */
+              background: radial-gradient(ellipse at center,  rgba(255,255,255,0.2) 0%,rgba(255,255,255,0) 20%); /* W3C */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+          
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              
+              /* -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+              -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+              box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3); */
+              
+              content: "";
+              height: 180px;
+              left: 10px;
+              position: absolute;
+              width: 180px;
+          }
+          /* -------------------------------------------------------------------------------- */
+
+          :root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+  
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #A74AC7;
+  font-weight: bold;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #A74AC7;
+  font-weight: bold;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #E238EC;
+  font-weight: bold;
+} 
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #E238EC;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-weight: bold;
+}    
+
+.fr{
+    color: #E238EC;
+}
+.card {
+  padding: 20px;
+}
+.col-3 {
+  margin-bottom: 20px;
+}
+
+      </style>
+    </head>
+<body>
+  <div class="jumbotron text-center">
+    <p1>Top 10 Songs</p1>
+    <br/>
+    <p1>Last.fm</p1>
+  <div></div>
+  <br/>
+  <div class="container">
+    <div class="row">
+      {% for song in song_data %}
+        <div class="col-3">
+            <div class="card">
+                <img src="{{song.album_image_url}}" class="card__image" alt="{{ collection.collectionname }}" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                     <!-- <img class="card__thumb" src="{{ collection.image.url }}" alt="" /> -->
+                    <div class="card__header-text">
+                      <h3 class="card__title">{{song.song_name}}</h3>            
+                      <span class="card__status">details</span>
+                    </div>
+                  </div>
+                  <p class="card__description" >{{song.artist_name}}<br>{{song.genres}}</fr></p>
+                </div>
+                <br>
+              </div> 
+        </div>
+      {% endfor %}
+    </div>
+</div>
+<div id="background-wrap">
+  <div class="bubble x1"></div>
+  <div class="bubble x2"></div>
+  <div class="bubble x3"></div>
+  <div class="bubble x4"></div>
+  <div class="bubble x5"></div>
+  <div class="bubble x6"></div>
+  <div class="bubble x7"></div>
+  <div class="bubble x8"></div>
+  <div class="bubble x9"></div>
+  <div class="bubble x10"></div>
+</div>
+
+</body>
+</html>
+{%endblock%}
+
+
+
+ <!-- <div class="card">
+    <img src="{{song.album_image_url}}" class="card__image" alt="{{ collection.collectionname }}" />
+    <div class="card__overlay">
+      <div class="card__header">
+        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+         <img class="card__thumb" src="{{ collection.image.url }}" alt="" />
+        <div class="card__header-text">
+          <h3 class="card__title">{{song.song_name}}</h3>            
+          <span class="card__status">details</span>
+        </div>
+      </div>
+      <p class="card__description" >{{song.artist_name}}<br>{{song.genres}}</fr></p>
+    </div>
+    <br>
+  </div>  -->

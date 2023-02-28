@@ -1,0 +1,150 @@
+{% extends "base1.html" %}
+
+
+
+
+
+
+
+
+
+   
+{%block content%}
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<head>
+    <style>
+        .jumbotron{
+            background-color: rgba(255, 255, 255, 0.001);
+        }
+        * {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: #000
+}
+
+.card {
+    width: 350px;
+    background: url("https://media.istockphoto.com/id/1339610766/photo/disco-ball-neon-party-lights-with-smoke.jpg?s=612x612&w=0&k=20&c=GNenHLD9KSkf23v8YVj8HAQjUYCG-tbOhnjDhtAnbto=") ;
+    
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.card:hover .image img {
+    transform: scale(1.5)
+}
+
+.btn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.idd {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.idd1 {
+    font-size: 12px
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px
+}
+
+.text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500
+}
+
+.icons i {
+    font-size: 19px
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}
+.btn-primary{
+  background-color: #f44336;
+  color: rgb(0, 0, 0);
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  right: 110px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        
+    </div>
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center"> <div class="card p-4"> <div class=" image d-flex flex-column justify-content-center align-items-center"> 
+    {% for user in Detail %}
+     <button class="btn btn-secondary"> <img src="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Penguin-512.png" height="100" width="100" /></button> 
+     <span class="name mt-3" style="color: #ffffff;">{{ user.UserName }}</span> 
+     <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+         <span class="name mt-3" style="color: #ffffff;">First Name: {{ user.FirstName }}</span> <span><i class="fa fa-copy"></i></span> </div>
+         <span class="name mt-3" style="color: #ffffff;">Last Name: {{ user.LastName }}</span> <span><i class="fa fa-copy"></i></span> </div>
+          <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+             <span class="name mt-3"style="color: #ffffff;">Age:{{ user.age }}</span></span> </div> <div class=" d-flex mt-2">
+                <a href="{% url 'confirm_delete_user' user_id=user.id %}" class="btn-primary" style="font-family:fantasy">Delete</a>
+               
+    </div>
+        
+                 
+
+{% endfor %}
+</div>
+</body>
+</html>
+{%endblock%} 
+
+
+   
+
